@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firma Paneli</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+    <h1>Firma Kayıt Sistemi</h1>
+    <a href="/logout">Çıkış Yap</a>
+
+    <form method="POST">
+        <input type="text" name="firma" placeholder="Firma adı girin">
+        <button type="submit">Kaydet</button>
+    </form>
+
+    <form method="GET">
+        <input type="text" name="arama" placeholder="Firma ara">
+        <button type="submit">Ara</button>
+    </form>
+
+    <h2>Kayıtlı Firmalar</h2>
+
+    <ul>
+        {% for firma in firmalar %}
+            <li>
+    {{ firma[1] }}
+    <a href="/sil/{{ firma[0] }}">Sil</a>
+    <a href="/duzenle/{{ firma[0] }}">Düzenle</a>
+          </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
