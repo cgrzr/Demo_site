@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+    <h1>Giriş Yap</h1>
+
+    <form method="POST">
+        <input type="text" name="kullanici" placeholder="Kullanıcı adı">
+        <input type="password" name="sifre" placeholder="Şifre">
+        <button type="submit">Giriş</button>
+    </form>
+
+    <h3>{{ hata }}</h3>
+</div>
+
+</body>
+</html>
